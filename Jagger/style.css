@@ -1,0 +1,18 @@
+/* Ensure HTML and BODY take the full viewport height */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Center the container in the middle of the page */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* To remove any margins from Bootstrap that may offset it from the center */
+.container {
+    margin-top: 0 !important;
+}
+
