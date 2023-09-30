@@ -21,19 +21,23 @@
                         <h5 class="mb-0">Upload Your Image</h5>
                     </div>
                     <div class="card-body">
-                        <form action="/path_to_upload_script" method="post" enctype="multipart/form-data">
+                        <form id="uploadForm" enctype="multipart/form-data">
                             <div class="custom-file mb-3">
                                 <input type="file" class="custom-file-input" id="imageUpload" name="imageUpload">
                                 <label class="custom-file-label" for="imageUpload">Upload your fruit!</label>
                             </div>
-                            <div class="preview-image mb-3">
+                            <div class="preview-image d-flex justify-content-center mb-3">
                                 <img src="" id="preview" alt="Image Preview" class="img-fluid" style="display: none;">
                             </div>
                             <div class="text-center">
-                            <button type="submit" class="btn btn-dark">Upload</button>
+                                <button type="submit" class="btn btn-dark">Upload</button>
                             </div>
                         </form>
                     </div>
+                </div>
+                <div id="resultsSection" style="margin-top: 20px; display: none;">
+                    <h5>Results:</h5>
+                    <!-- The results will be appended here -->
                 </div>
             </div>
         </div>
