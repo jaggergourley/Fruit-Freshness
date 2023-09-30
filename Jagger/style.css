@@ -6,13 +6,18 @@ html, body {
 
 /* Center the container in the middle of the page */
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
 }
 
 /* To remove any margins from Bootstrap that may offset it from the center */
 .container {
-    margin-top: 0 !important;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
+.top-bar {
+    background-color: #333; /* Dark background */
+    color: #fff; /* White text */
+}
