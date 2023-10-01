@@ -1,30 +1,52 @@
-/* Ensure HTML and BODY take the full viewport height */
+/* 
+   Ensure both the HTML and BODY elements take up the full height of the viewport.
+*/
 html, body {
     height: 100%;
+    /* Removes default margin from the browser's stylesheet.*/
     margin: 0;
 }
 
-/* Center the container in the middle of the page */
+/* 
+   Relative positioning is set for the BODY, which allows us to absolutely position 
+   child elements (like the .container) relative to it.
+*/
 body {
     position: relative;
 }
 
-/* To remove any margins from Bootstrap that may offset it from the center */
+/* 
+   Centers the .container element in the middle of the page.
+*/
 .container {
+    /* Absolute positioning is used so the element can be placed precisely within its relative parent */
     position: absolute;
+    /* Places the top edge of the container at 45% from the top of the parent (body) */
     top: 45%;
+    /* Places the left edge of the container at the midpoint of the parent (body) */
     left: 50%;
+    /* Moves the container up and left by half its own width and height respectively.*/
     transform: translate(-50%, -50%);
 }
 
+/* 
+   Styles for the .top-bar class, used for a header.
+*/
 .top-bar {
-    background-color: #333; /* Dark background */
-    color: #fff; /* White text */
+    /* Sets a dark gray background color */
+    background-color: #333;
+    /* Text within this class will be white */
+    color: #fff;
 }
 
+/* 
+   Additional styling for displaying results, after an image upload is completed.
+*/
 .results {
+    /* Add some space above the results section */
     margin-top: 20px;
+    /* A light gray border is added at the top of the results section*/
     border-top: 1px solid #ddd;
+    /* Adds some padding at the top of the results content, pushing it down slightly*/
     padding-top: 10px;
-  }
-  
+}

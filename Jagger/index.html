@@ -6,42 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Produce Analyzer</title>
+    <title>Happy Fruit!</title>
 </head>
 
 <body>
+    <!-- A div element for the top bar of the website -->
     <div class="top-bar text-center py-2">
-        <span>Produce Analyzer</span>
+        <!-- The name/title of the web application -->
+        <span>Happy Fruit!</span>
     </div>
+
+    <!-- A container div for centering and wrapping content with some margin-top spacing -->
     <div class="container mt-5">
+        <!-- A row div to create a horizontal row of columns -->
         <div class="row">
+            <!-- A column div that takes up 8 columns (out of 12) in the middle of the viewport for larger devices like desktops. The offset-md-2 centers the column in the middle. -->
             <div class="col-md-8 offset-md-2">
+                <!-- A card component from Bootstrap, which contains content and actions about a single subject -->
                 <div class="card">
+                    <!-- The header section of the card -->
                     <div class="card-header bg-dark text-white text-center">
+                        <!-- Title for the card header -->
                         <h5 class="mb-0">Upload Your Image</h5>
                     </div>
+                    <!-- The body section of the card -->
                     <div class="card-body">
+                        <!-- A form with an ID of "uploadForm", and it supports file uploads -->
                         <form id="uploadForm" enctype="multipart/form-data">
+                            <!-- A custom file input field wrapped in a div for better styling -->
                             <div class="custom-file mb-3">
+                                <!-- The actual file input element where users select an image to upload -->
                                 <input type="file" class="custom-file-input" id="imageUpload" name="imageUpload">
-                                <label class="custom-file-label" for="imageUpload">Upload your fruit!</label>
+                                <!-- Label for the file input, gives user instruction -->
+                                <label class="custom-file-label" for="imageUpload">Show Us Your Fruit!</label>
                             </div>
+                            <!-- A div for previewing the uploaded image -->
                             <div class="preview-image d-flex justify-content-center mb-3">
+                                <!-- The img tag where the preview of the uploaded image will be displayed -->
                                 <img src="" id="preview" alt="Image Preview" class="img-fluid" style="display: none;">
                             </div>
+                            <!-- A centered div for the upload button -->
                             <div class="text-center">
+                                <!-- The button to submit the form (i.e., upload the image) -->
                                 <button type="submit" class="btn btn-dark">Upload</button>
                             </div>
                         </form>
                     </div>
                 </div>
+                <!-- A section below the upload card for displaying results. It is initially hidden with "display: none" style. -->
                 <div id="resultsSection" style="margin-top: 20px; display: none;">
+                    <!-- Title for the results section -->
                     <h5>Results:</h5>
-                    <!-- The results will be appended here -->
+                    <!-- Placeholder where the results will be dynamically appended after processing the uploaded image -->
                 </div>
             </div>
         </div>
     </div>
+    <!-- Link to the JavaScript file named "script.js" which likely contains the logic for handling the image upload and processing -->
     <script src="script.js"></script>
 </body>
 
